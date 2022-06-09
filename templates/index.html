@@ -1,13 +1,190 @@
 <!DOCTYPE html>
 <head>
-    <title>Machine Learning</title>
+     <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Customer Churn</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+  </head>
+       
+  <style>
+    
+    @media screen and (max-width: 500px) {
+    .col-25, .col-75, input[type=submit] {
+    width: 50%;
+    margin-top: 0;
+    }
+    }
+    .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    }
+    .col-25 {
+      text-align: right;
+      margin-left: 2%;
+      float: left;
+      width: 50%;
+      
+    }
+
+    .col-75 {
+      float:left;
+      width: 0%;
+      
+    }
+    .button{
+      margin-left: 54%;
+    }
+    .contentservice {
+      justify-content: center;
+      display: flex;
+    }
+    #texto {
+      
+      width: 30%;
+      font-size: 20px;     
+      color: white;
+      margin-right: 0%;
+      margin-left: 2%;
+    }
+
+    #alinhar {
+      
+      margin-left: 8.5%; 
+      width: 50%; 
+      color: rgb(2, 33, 63);
+      }
+
+      h1{
+        font-size:x-large;
+        margin-top: 0%;
+        margin-bottom: 0%;
+        text-align: center;
+        color: rgb(4, 4, 80);
+      }
+      h2{
+        color: aliceblue;
+        margin-top: 0%;
+        margin-bottom: 0,2%;
+        text-align: center;
+        font-size:large;
+      }
+  </style>
 </head>
-<body>
+<body style="background-color:rgb(186, 214, 250)">  
+  
 
-    <form action="predicao" method="POST">
-        <input type="text" name="comentario"/>
-        <button>Enviar</button>
-    </form>
+  <img src="https://storage.googleapis.com/kaggle-datasets-images/522275/959195/b0e445e8d51cbbb098917a006378d829/dataset-cover.png?t=2020-02-20-16-56-51"  height="170" width="1365" alt="">
+  <h1>Airline Passenger Satisfaction </h1>   
+  <h2>What factors lead to customer satisfaction for an Airline?</h2>
+  <br>
+  <br>
+  <div class="contentservice">  
 
+        
+
+        <div id="alinhar">
+          <h1>Insira os dados do passageiro Aqui:</h1>
+
+          <form action="predicao" method="POST"> 
+
+            <div class="row">
+              <div class="col-25">
+                <label for="Type_of_Travel"><b>Type_of_Travel:</b></label>
+              </div>
+              <div class="col-75">
+                <select id="Type_of_Travel" name="Type_of_Travel" required>
+                  <option value="0">Personal Travel</option>
+                  <option value="1">Business travel</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-25">
+                <label for="Customer_Type"><b>Customer_Type:</b></label>
+              </div>
+              <div class="col-75">
+                <select id="Customer_Type" name="Customer_Type" required>
+                  <option value="1">Loyal Customer</option>
+                  <option value="0">disloyal Customer</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-25">
+                <label for="Class"><b>Class:</b></label>
+              </div>
+              <div class="col-75">
+                <select id="Class" name="Class" required>
+                  <option value="0">Eco</option>
+                  <option value="1">Business</option>
+                  <option value="2">Eco Plus</option>
+                </select> 
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-25">
+                <label for="Age"><b>Age:</b></label>
+              </div>
+              <div class="col-75">
+                <input type="number" min="0" max="100" name="Age" required>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-25">
+                <label for="Flight_Distance"><b>Flight_Distance:</b></label>
+              </div>
+              <div class="col-75">
+                <input type="number" min="0" max="5" name="Flight_Distance" required>
+              </div>
+              
+            </div>
+            
+            <div class="row">
+              <div class="col-25">
+                <label for="Inflight_wifi_service"><b>Inflight_wifi_service:</b></label>
+              </div>
+              <div class="col-75">
+                <input type="number" min="0" max="5"name="Inflight_wifi_service" required>
+              </div>
+              
+            </div>
+            
+            <div class="row">
+              <div class="col-25">
+                <label for="Departure_Arrival_time_convenient"><b>Departure_Arrival_time_convenient:</b></label>
+              </div>
+              <div class="col-75">
+                <input type="number" min="0" max="5" name="Departure_Arrival_time_convenient" required> 
+              </div>
+            </div>
+            
+            <div class="row">
+              <div class="col-25">
+                <label for="Ease_of_Online_booking"><b>Ease_of_Online_booking:</b></label>
+              </div>
+              <div class="col-75">
+                <input type="number"min="0" max="5" name="Ease_of_Online_booking" required> 
+              </div> 
+            </div>
+                 
+
+            <div class="button">
+              <button type="submit">Analisar</button>
+          </div>
+          </form>
+        </div>
+ 
+
+  </div> 
+  
+    
 </body>
 </html>

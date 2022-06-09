@@ -1,12 +1,28 @@
 <!DOCTYPE html>
 <head>
-    <title>Resposta</title>
+    <title>Resposta Churn</title>
+    <script>
+    
+    </script>
 </head>
-<body>
+<body style="background-color:rgb(182, 209, 212)">  
+    <img src="https://storage.googleapis.com/kaggle-datasets-images/522275/959195/b0e445e8d51cbbb098917a006378d829/dataset-cover.png?t=2020-02-20-16-56-51"  height="170" width="1365" alt="">
+<br>
+<br>
     {% if predicao == 1 %}
-        <div style="color: blue">Comentário Positivo</div>
+        <div style="color:red; text-align: center; font-size: xx-large; border-style: double" ><b>Passageiro Insatisfeito!</b></div>
+          <center>
+            <img src="https://i0.statig.com.br/bancodeimagens/a1/fy/cd/a1fycdbdyzapf1stgkijgkwze.jpg"  height="170" width="1365" alt="Um homem insastifeito dentro do avião"> 
+          </center>
+
+
     {% else %}
-        <div style="color: red">Comentário Negativo</div>
-    {% endif %}
+        <div style="color: green;text-align: center; font-size: xx-large;border-style: double; "><b>Passageiro Satisfeito!</b></div>
+        <center>
+            <img src="https://www.opovo.com.br/noticiasimages/app/noticia_146418291334/2017/10/25/324476/samsung-avio.jpg"  height="170" width="1365" alt="Pessoas felizes no avião"> 
+          </center>
+        {% endif %}      
+
 </body>
+
 </html>
